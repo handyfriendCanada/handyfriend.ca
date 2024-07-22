@@ -6,8 +6,8 @@ export default async function handler(req, res) {
   const token = process.env.TELEGRAM_BOT_TOKEN
   const chat_id = process.env.TELEGRAM_CHAT_ID
   
-  if (!token) throw new Error('TELEGRAM_BOT_TOKEN environment variable not found.')
-  if (!chat_id) throw new Error('TELEGRAM_CHAT_ID environment variable not found.')
+  if (!token)  res.status(500).json({ status: 'TELEGRAM_BOT_TOKEN environment variable not found.' })
+  if (!chat_id) res.status(500).json({ status: 'TELEGRAM_CHAT_ID environment variable not found.' })
   if (req.method === 'POST') {
     const { message } = req.body;
     
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
           text: message,
           chat_id,
         }
-      });
+      })
 
       res.status(200).json({ status: 'Message sent successfully!' });
     } catch (error) {
