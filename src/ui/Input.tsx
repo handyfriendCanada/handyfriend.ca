@@ -47,6 +47,7 @@ const Input = forwardRef<HTMLInputElement, IInput>(
             'mt-1': label,
           })}>
           <div className='absolute top-1/2 left-3 -translate-y-1/2'>{icon && icon}</div>
+          {/* @ts-ignore */}
           <InputUI
             ref={ref}
             type={type}
