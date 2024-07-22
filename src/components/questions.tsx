@@ -6,6 +6,7 @@ import clsx from 'clsx';
 
 const AccordionItem = ({ title, children, isOpen, onClick }: any) => {
   return (
+    // @ts-ignore
     <Accordion
       icon={
         <svg
