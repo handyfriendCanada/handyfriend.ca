@@ -42,7 +42,22 @@ const Contact = () => {
       message: "",
     },
   });
-  const onSubmit = (data: any) => console.log(data);
+  const onSubmit = (data: any) => {
+    const response = fetch("/api/send-message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ message: 
+        `Contact us
+        Name: ${data.firstName}
+        Phone: ${data.number}
+        Email: ${data.email}
+        Message: ${data.message}
+        `
+      }),
+    });
+  };
 
   return (
     <div className="px-5 bg-lightBG flex justify-center py-7 sm:py-20 lg:py-28">

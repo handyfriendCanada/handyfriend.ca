@@ -132,7 +132,22 @@ const Booking = ({ secondary }: { secondary?: boolean }) => {
   const onSubmit = (data, event) => {
     event.preventDefault();
     handleNext();
-    console.log(data);
+    const response = fetch("/api/send-message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ message: 
+        `Get a free quote
+          \nFirst Name: ${data.firstName}
+          \nEmail: ${data.email}
+          \nNumber: ${data.number}
+          \nPreferred communication method: ${data.communicationMethod}
+          \nPreferred time to call: ${data.timeToCall}
+          \nPreferred job done: ${data.jobDone}
+        `
+      }),
+    });
   };
 
   const openModal = () => {

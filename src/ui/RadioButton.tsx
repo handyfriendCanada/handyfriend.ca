@@ -14,7 +14,6 @@ const RadioButton = React.forwardRef<HTMLInputElement, IRadioButton>(
   ({ checked, value, onChange, label, isError }, ref) => {
     return (
       <div>
-{/*         @ts-ignore */}
         <Radio
           ref={ref}
           onChange={onChange}
