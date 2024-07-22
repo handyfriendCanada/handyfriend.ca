@@ -27,6 +27,7 @@ const AccordionItem = ({ title, children, isOpen, onClick }: any) => {
       }
       open={isOpen}
       className='mb-2 rounded-3xl overflow-hidden bg-white border border-[#151515] px-3 sm:px-10'>
+      // @ts-ignore
       <AccordionHeader
         onClick={onClick}
         className={`text-black opacity-100 text-[14px] sm:text-xl font-medium border-b-0 transition-all ${
