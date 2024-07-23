@@ -43,7 +43,7 @@ const Button = ({
     type={type}
     onClick={onClick}
     className={cxls(
-      'relative inline-flex px-7 py-3 text-center select-none items-center justify-center font-medium rounded-[32px] transition-all duration-300',
+      'whitespace-nowrap relative inline-flex px-7 py-3 text-center select-none items-center justify-center font-medium rounded-[32px] transition-all duration-300',
       {
         'text-black bg-main border-2 border-main text-lg font-semibold hover:text-white': primary,
         'text-black bg-main border-2 border-black text-lg font-semibold hover:text-white hover:border-white':

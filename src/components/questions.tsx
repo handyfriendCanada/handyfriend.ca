@@ -26,7 +26,7 @@ const AccordionItem = ({ title, children, isOpen, onClick }: any) => {
         </svg>
       }
       open={isOpen}
-      className='mb-2 rounded-3xl overflow-hidden bg-white border border-[#151515] px-3 sm:px-10'>
+      className='mb-2 rounded-3xl overflow-hidden bg-white border border-[#151515] px-10 sm:px-3'>
       {/* @ts-ignore */}
       <AccordionHeader
         onClick={onClick}

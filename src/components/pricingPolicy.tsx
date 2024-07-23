@@ -29,6 +29,7 @@ const PricingPolicy = () => {
                 quality={100}
                 width={390}
                 height={211}
+                layout='intrinsic'
                 className='max-w-[600px] h-full lg:hidden block rounded-[30px]'
                 src={PricingMobileImage}
                 alt='tools'

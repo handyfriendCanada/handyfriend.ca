@@ -138,14 +138,7 @@ const Booking = ({ secondary }: { secondary?: boolean }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ message: 
-        `Get a free quote
-          \nFirst Name: ${data.firstName}
-          \nEmail: ${data.email}
-          \nNumber: ${data.number}
-          \nPreferred communication method: ${data.communicationMethod}
-          \nPreferred time to call: ${data.timeToCall}
-          \nPreferred job done: ${data.jobDone}
-        `
+        `Get a free quote\nFirst Name: ${data.firstName}\nEmail: ${data.email}\nNumber: ${data.number}\nPreferred communication method: ${data.communicationMethod}\nPreferred time to call: ${data.timeToCall}\nPreferred job done: ${data.jobDone}`
       }),
     });
   };

@@ -86,15 +86,15 @@ const ReviewCard = ({
 
 const Reviews = () => {
   return (
-    <div className='bg-main pt-5 md:pt-20'>
-      <div className='bg-main flex justify-center items-center md:bg-[url("/reviews-bg.png")] md:bg-no-repeat md:bg-right bg-contain'>
-        <div className='px-5 py-10 lg:py-24 xl:py-12 pt-5 lg:pt-[40px] xl:pt-[80px] max-w-screen-container w-full flex flex-col gap-10'>
-          <h3
-            id='reviews'
-            className='scroll-m-[100px] xl:scroll-m-[200px] text-white text-[32px] sm:text-5xl font-semibold leading-[30px] xs:leading-[67px]'>
-            Customer reviews
-          </h3>
-          <div>
+    <div className='pt-5 md:pt-20 bg-main flex justify-center items-center'>
+      <div className='bg-main w-full max-w-screen-container'>
+        <div className='md:bg-[url("/reviews-bg.png")] md:bg-no-repeat md:bg-right bg-contain'>
+          <div className='px-5 py-10 lg:py-24 xl:py-12 pt-5 lg:pt-[40px] xl:pt-[80px] w-full flex flex-col gap-10'>
+            <h3
+              id='reviews'
+              className='scroll-m-[100px] xl:scroll-m-[200px] text-white text-[32px] sm:text-5xl font-semibold leading-[30px] xs:leading-[67px]'>
+              Customer reviews
+            </h3>
             <Swiper
               containerModifierClass='reviews-container-'
               slidesPerView={4}
@@ -124,7 +124,7 @@ const Reviews = () => {
                 },
               }}
               modules={[Pagination]}
-              className='h-full flex justify-center'>
+              className=''>
               {reviews.map((review, index) => (
                 <SwiperSlide className='h-full' key={review.user + index}>
                   <ReviewCard text={review.text} avatar={review.avatar} user={review.user} />

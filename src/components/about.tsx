@@ -8,7 +8,7 @@ import About3Image from '@/assets/about3.jpg';
 const StatsBlock = ({ title, subtitle }: { title: string; subtitle: string }) => {
   return (
     <div className='flex flex-col items-center gap-1 sm:gap-3'>
-      <p className='text-main text-[40px] sm:text-[64px] font-semibold'>{title}</p>
+      <p className='text-main text-[40px] sm:text-[50px] xl:text-[64px] font-semibold'>{title}</p>
       <p className='text-center text-black text-[18px] sm:text-xl font-semibold'>{subtitle}</p>
     </div>
   );
