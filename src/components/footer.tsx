@@ -40,7 +40,7 @@ const Footer = () => {
                   text='M6P 2S3 Toronto'
                 />
               </a>
-              <button onClick={onCopy}>
+              <button onClick={onCopy} type='button'>
                 <InfoItem
                   icon={<Image width={25} alt='phone' src={PhoneIcon} />}
                   text='+1-647-828-96-33'

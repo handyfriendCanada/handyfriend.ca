@@ -17,14 +17,14 @@ export default function Home() {
         <div className='hidden lg:block h-[92vh] [@media_(max-height:600px)]:h-auto [@media_(max-height:600px)]:py-10 [@media_(min-height:1024px)]:h-[810px] max-w-screen-container w-full bg-[url("/background.png")] bg-center sm:bg-left bg-no-repeat bg-cover sm:bg-contain'>
           <div className='w-full h-full flex flex-col [@media_(max-height:800px)_and_(max-width:1024px)]:justify-center [@media_(max-height:800px)]:justify-center lg:justify-center [@media_(max-height:620px)]:gap-5 sm:gap-8 [@media_(max-height:800px)]:bg-none [@media_(max-height:800px)_and_(min-width:1100px)]:bg-[url("/background2.png")] bg-[url("/background2.png")] bg-no-repeat bg-bottom sm:bg-right-bottom xl:bg-[calc(100%-6rem)_center] bg-[length:340px] min-[430px]:bg-[length:430px] sm:bg-[length:470px] xl:bg-contain'>
             <div className='flex flex-col gap-14'>
-              <div className='max-w-[748px]'>
+              <h1 className='max-w-[748px]'>
                 <span className='text-main text-[25px] min-[430px]:text-[34px] sm:text-[67px] font-semibold sm:leading-[72px] leading-[30px] min-[430px]:leading-[40.80px]'>
                   Handyman
                 </span>
                 <span className='text-black text-[25px] min-[430px]:text-[34px] sm:text-[67px] font-semibold sm:leading-[72px] leading-[30px] min-[430px]:leading-[40.80px]'>
                   &nbsp;- your reliable assistant <br /> in household chores
                 </span>
-              </div>
+              </h1>
               <p className='max-w-[683px] text-black sm:text-lg sm:font-normal text-sm font-light'>
                 I will quickly, efficiently, and reliably perform any work around your house,
                 ensuring that every task, whether big or small, is handled with the utmost care and
@@ -38,12 +38,12 @@ export default function Home() {
         </div>
         <div className='block lg:hidden  max-w-screen-container w-full bg-[url("/background.png")] bg-[center_left_25%]'>
           <div className='w-full h-full flex flex-col'>
-            <div className='max-w-[748px]'>
+            <h1 className='max-w-[748px]'>
               <span className='text-main text-[34px] leading-[40.8px] font-semibold'>Handyman</span>
               <span className='text-black font-semibold  text-[34px] leading-[40.8px]'>
                 &nbsp;- your reliable assistant <br /> in household chores
               </span>
-            </div>
+            </h1>
             <p className='max-w-[683px] text-black text-[14px] leading-[21px] font-light mt-[15px] mb-[35px]'>
               I will quickly, efficiently, and reliably perform any work around your house, ensuring
               that every task, whether big or small, is handled with the utmost care and
