@@ -64,7 +64,7 @@ const Questions = () => {
           Frequently Asked Questions
           <p className="text-[16px] lg:text-[22px] md:text-[18px] mx-auto font-light leading-normal">
             If the FAQ below does not answer your questions, feel free to get in
-            touch or email us at handyfriend@.ca.
+            touch or email us at <a href="mailto:contact@handyfriend.ca">contact@handyfriend.ca</a>
           </p>
         </h3>
         <div className="flex flex-col md:flex-row items-start justify-center gap-1 sm:gap-6">
@@ -96,7 +96,7 @@ const Questions = () => {
               onClick={() => handleOpen(5)}
             >
               We provide services in the following areas of Toronto:
-              <br />• Toronto & East York
+              <br />• Toronto & Gta
               <br />• North York
               <br />• Scarborough
               <br />• Markham

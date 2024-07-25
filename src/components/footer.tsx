@@ -20,7 +20,7 @@ const InfoItem = ({ icon, text }: { icon: ReactNode; text: string }) => {
 
 const Footer = () => {
   const onCopy = () => {
-    navigator.clipboard.writeText('+1 6478289633');
+    navigator.clipboard.writeText('+1-647-828-96-33');
     toast.info('Copied');
   };
 
@@ -43,7 +43,7 @@ const Footer = () => {
               <button onClick={onCopy}>
                 <InfoItem
                   icon={<Image width={25} alt='phone' src={PhoneIcon} />}
-                  text='+1 6478289633'
+                  text='+1-647-828-96-33'
                 />
               </button>
               <a className='cursor-pointer' href='mailto:contact@handyfriend.ca'>

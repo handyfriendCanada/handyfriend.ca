@@ -88,7 +88,7 @@ const Contact = () => {
                 name='firstName'
                 control={control}
                 render={({ field }) => (
-                  <Input {...field} label='First name' error={errors.firstName?.message} />
+                  <Input {...field} label='Name' error={errors.firstName?.message} />
                 )}
               />
               <Controller

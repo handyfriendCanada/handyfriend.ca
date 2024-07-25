@@ -34,18 +34,18 @@ const PricingPolicy = () => {
                 src={PricingMobileImage}
                 alt='tools'
               />
-              <div className='xs:max-w-[680px] w-full flex flex-col xs:flex-row items-center justify-between'>
+              <div className='xs:max-w-[680px] w-full flex flex-col 1xs:flex-row items-center justify-between'>
                 <div className='flex flex-col gap-1'>
-                  <div className='flex xs:block items-center gap-5'>
+                  <div className='block items-center gap-5'>
                     <p className='text-center text-black text-[16px] sm:text-[24px] font-normal'>
                       First hour:
                     </p>
 
                     <div className='flex items-center justify-center gap-2'>
-                      <span className='text-black text-[28px] sm:text-[40px] font-normal line-through'>
+                      <span className='text-black text-[22px] xs:text-[28px] sm:text-[40px] font-normal line-through'>
                         $99
                       </span>
-                      <span className='text-main text-[34px] sm:text-[50px] font-bold '>
+                      <span className='text-main text-[28px] xs:text-[34px] sm:text-[50px] font-bold '>
                         $74.25
                       </span>
                     </div>
@@ -54,16 +54,16 @@ const PricingPolicy = () => {
                     (with 25% discount),
                   </p>
                 </div>
-                <div className='flex flex-col gap-1'>
-                  <div className='flex xs:block items-center gap-5'>
+                <div className='flex flex-col gap-1 mt-4 1xs:mt-0'>
+                  <div className='block items-center gap-5'>
                     <p className='text-center text-black text-[16px] sm:text-[24px] font-normal'>
                       Each additional hour:
                     </p>
                     <div className='flex items-center justify-center gap-2'>
-                      <span className='text-black text-[28px] sm:text-[40px] font-normal line-through'>
+                      <span className='text-black text-[22px] xs:text-[28px] sm:text-[40px] font-normal line-through'>
                         $49
                       </span>
-                      <span className='text-main text-[34px] sm:text-[50px] font-bold '>
+                      <span className='text-main text-[28px]  xs:text-[34px] sm:text-[50px] font-bold '>
                         $36.75
                       </span>
                     </div>

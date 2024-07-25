@@ -4,6 +4,8 @@ import { Poppins } from "next/font/google";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { ToastContainer, Slide } from "react-toastify";
+import SocialIcons from "@/components/socialIcons";
+import Discount from "@/components/Discount";
 
 import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
@@ -83,7 +85,7 @@ const structeData = {
     ],
   },
   url: "https://handyfriend.ca",
-  telephone: "+16478289633",
+  telephone: "+1-647-828-96-33",
 };
 
 const poppins = Poppins({
@@ -143,6 +145,8 @@ export default function RootLayout({
           <Header />
         </div>
         {children}
+        <Discount />
+        <SocialIcons />
         <Footer />
       </body>
     </html>

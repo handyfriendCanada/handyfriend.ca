@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Controller, useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -64,7 +64,17 @@ const validationSchema = [
   }),
 ];
 
-const Booking = ({ secondary }: { secondary?: boolean }) => {
+const Booking = ({
+  secondary,
+  withOutBtn,
+  open = false,
+  onClose,
+}: {
+  secondary?: boolean;
+  withOutBtn?: boolean;
+  open?: boolean;
+  onClose?: any;
+}) => {
   const [isOpened, setOpened] = useState(false);
   const [[page, direction], setPage] = useState([0, 0]);
   const [activeStep, setActiveStep] = useState(0);
@@ -137,8 +147,8 @@ const Booking = ({ secondary }: { secondary?: boolean }) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ message: 
-        `Get a free quote\nFirst Name: ${data.firstName}\nEmail: ${data.email}\nNumber: ${data.number}\nPreferred communication method: ${data.communicationMethod}\nPreferred time to call: ${data.timeToCall}\nPreferred job done: ${data.jobDone}`
+      body: JSON.stringify({
+        message: `Get a free quote\nFirst Name: ${data.firstName}\nEmail: ${data.email}\nNumber: ${data.number}\nPreferred communication method: ${data.communicationMethod}\nPreferred time to call: ${data.timeToCall}\nPreferred job done: ${data.jobDone}`,
       }),
     });
   };
@@ -147,18 +157,31 @@ const Booking = ({ secondary }: { secondary?: boolean }) => {
     setOpened(true);
   };
 
+  useEffect(() => {
+    if (open) {
+      openModal();
+    }
+  }, [open]);
+
   return (
     <div>
-      {secondary ? (
-        <Button className="text-lg" secondary onClick={openModal}>
-          Get a free quote
-        </Button>
-      ) : (
-        <Button className="text-lg" primary onClick={openModal}>
-          Get a free quote
-        </Button>
-      )}
-      <Modal isOpened={isOpened} onClose={() => setOpened(false)}>
+      {!withOutBtn &&
+        (secondary ? (
+          <Button className="text-lg" secondary onClick={openModal}>
+            Get a free quote
+          </Button>
+        ) : (
+          <Button className="text-lg" primary onClick={openModal}>
+            Get a free quote
+          </Button>
+        ))}
+      <Modal
+        isOpened={isOpened}
+        onClose={() => {
+          setOpened(false);
+          if (onClose) onClose();
+        }}
+      >
         <div className="flex flex-col gap-10 h-full overflow-hidden">
           <AnimatePresence mode="popLayout" initial={false} custom={direction}>
             <div className="overflow-hidden">
@@ -484,7 +507,13 @@ const Booking = ({ secondary }: { secondary?: boolean }) => {
                           We will contact you as soon as possible.
                         </h5>
 
-                        <Button type="button" onClick={() => setOpened(false)}>
+                        <Button
+                          type="button"
+                          onClick={() => {
+                            if (onClose) onClose();
+                            setOpened(false);
+                          }}
+                        >
                           Close
                         </Button>
                       </div>

@@ -13,6 +13,7 @@ const config: Config = withMT({
   theme: {
     screens: {
       '2xs': '320px',
+      '1xs': '365px',
       xs: '430px',
       sm: '640px',
       md: '768px',
