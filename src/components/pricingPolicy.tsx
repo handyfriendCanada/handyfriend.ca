@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import PricingImage from '@/assets/pricing.jpg';
 import PricingMobileImage from '@/assets/pricingMobile.jpg';
+import AnimatedText from './animatedText';
 
 const PricingPolicy = () => {
   return (
@@ -16,12 +17,12 @@ const PricingPolicy = () => {
               height={560}
               className='w-full h-full rounded-[30px]'
               src={PricingImage}
-              alt='tools'
+              alt='Pricing'
             />
           </div>
           <div className='pt-8 lg:max-w-[720px] w-full flex flex-col gap-4 sm:gap-14 items-center justify-center'>
             <h3 className='text-center text-black text-[32px] sm:text-5xl font-semibold leading-[67px]'>
-              Pricing Policy
+              <AnimatedText text='Pricing Policy' />
             </h3>
 
             <div className='flex flex-col items-center lg:gap-14 gap-10'>
@@ -32,7 +33,7 @@ const PricingPolicy = () => {
                 layout='intrinsic'
                 className='max-w-[600px] h-full lg:hidden block rounded-[30px]'
                 src={PricingMobileImage}
-                alt='tools'
+                alt='Pricing'
               />
               <div className='xs:max-w-[680px] w-full flex flex-col 1xs:flex-row items-center justify-between'>
                 <div className='flex flex-col gap-1'>

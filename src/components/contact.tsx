@@ -12,6 +12,7 @@ import Textarea from '@/ui/Textarea';
 import { toast } from 'react-toastify';
 
 import ContactImage from '@/assets/contact.png';
+import AnimatedText from './animatedText';
 
 const schema = yup.object({
   firstName: yup.string().required('First name is required'),
@@ -74,14 +75,14 @@ const Contact = () => {
               height={632}
               className='rounded-[30px]'
               src={ContactImage}
-              alt='tools'
+              alt='Contact'
             />
           </div>
           <div className='h-full min-[430px]:max-w-[768px] lg:max-w-none basis-auto md:basis-1/2 w-full flex flex-col gap-5 lg:gap-10'>
             <h3
               id='contacts'
               className='scroll-m-[100px] xl:scroll-m-[140px] text-black text-[32px] sm:text-5xl font-semibold leading-[67px]'>
-              Contact us
+              <AnimatedText text='Contact us' />
             </h3>
             <div className='h-full w-full flex flex-col justify-between gap-[30px] xl:gap-[47px]'>
               <Controller
@@ -116,7 +117,7 @@ const Contact = () => {
                       {...field}
                       label='Message'
                       error={errors.message?.message}
-                      placeholder='Write a message'
+                      placeholder='Please describe what needs to be done, provide the location address, and specify your preferred date for the work to be completed. Thank you, and we will get in touch with you as soon as possible.'
                     />
                   )}
                 />

@@ -7,6 +7,7 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import clsx from "clsx";
+import AnimatedText from "./animatedText";
 
 const AccordionItem = ({ title, children, isOpen, onClick }: any) => {
   return (
@@ -61,7 +62,7 @@ const Questions = () => {
           id="questions"
           className="scroll-m-[100px] xl:scroll-m-[200px] text-center text-black text-[32px] sm:text-5xl font-semibold leading-normal xs:leading-[67px]"
         >
-          Frequently Asked Questions
+          <AnimatedText text='Frequently Asked Questions' />
           <p className="text-[16px] lg:text-[22px] md:text-[18px] mx-auto font-light leading-normal">
             If the FAQ below does not answer your questions, feel free to get in
             touch or email us at <a href="mailto:contact@handyfriend.ca">contact@handyfriend.ca</a>
@@ -95,16 +96,7 @@ const Questions = () => {
               isOpen={open === 5}
               onClick={() => handleOpen(5)}
             >
-              We provide services in the following areas of Toronto:
-              <br />• Toronto & Gta
-              <br />• North York
-              <br />• Scarborough
-              <br />• Markham
-              <br />• Richmond Hill
-              <br />• Vaughan
-              <br />• Etobicoke
-              <br />• Mississauga
-              <br />• Brampton
+              We provide services in the following areas of Toronto & Gta
             </AccordionItem>
             <AccordionItem
               title="Do you work in the evenings, weekends, or holidays?"

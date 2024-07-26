@@ -76,7 +76,7 @@ const Booking = ({
   onClose?: any;
 }) => {
   const [isOpened, setOpened] = useState(false);
-  const [[page, direction], setPage] = useState([0, 0]);
+  const [[page, direction], setPage] = useState([1, 0]);
   const [activeStep, setActiveStep] = useState(0);
 
   const currentValidationSchema = validationSchema[activeStep];
@@ -185,7 +185,7 @@ const Booking = ({
         <div className="flex flex-col gap-10 h-full overflow-hidden">
           <AnimatePresence mode="popLayout" initial={false} custom={direction}>
             <div className="overflow-hidden">
-              {page === 0 && (
+              {/* {page === 0 && (
                 <motion.div
                   className="overflow-hidden"
                   key={"start-booking"}
@@ -208,9 +208,9 @@ const Booking = ({
                     </Button>
                   </div>
                 </motion.div>
-              )}
+              )} */}
 
-              {page !== 0 && (
+              {/* {page !== 0 && ( */}
                 <motion.form
                   onSubmit={handleSubmit(onSubmit)}
                   className="flex flex-col gap-10 overflow-hidden"
@@ -556,7 +556,7 @@ const Booking = ({
                     </div>
                   )}
                 </motion.form>
-              )}
+              {/* )} */}
             </div>
           </AnimatePresence>
         </div>

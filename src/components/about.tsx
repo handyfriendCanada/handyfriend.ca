@@ -5,14 +5,18 @@ import About1Image from '@/assets/about1.jpg';
 import About2Image from '@/assets/about2.jpg';
 import About3Image from '@/assets/about3.jpg';
 import AnimatedNumbers from './animatedNumbers';
+import AnimatedText from './animatedText';
 
-const StatsBlock = ({ title, subtitle }: { title: number | string; subtitle: string }) => {
+const StatsBlock = ({ title, subtitle }: { title: number; subtitle: string }) => {
   return (
     <div className='flex flex-col items-center gap-1 sm:gap-3'>
       <p className='text-main text-[40px] sm:text-[50px] xl:text-[64px] font-semibold'>
         <span className='sr-only'>{title}</span>
-        {/* <AnimatedNumbers value={title} /> */}
-        {title}
+        {title === 6 && (
+          '+'
+        )}
+        <AnimatedNumbers value={title} />
+        {/* {title} */}
       </p>
       <p className='text-center text-black text-[18px] sm:text-xl font-semibold'>{subtitle}</p>
     </div>
@@ -56,12 +60,11 @@ const About = () => {
             id='about'
             className='scroll-m-[100px] xl:scroll-m-[200px] text-black text-[32px] sm:text-5xl font-semibold leading-[67px]'
           >
-            About me
-            {/* <AnimatedText
+            <AnimatedText
               text='About me'
               className='scroll-m-[100px] xl:scroll-m-[200px] text-black text-[32px] sm:text-5xl font-semibold leading-[67px]'
-            /> */}
-            <span className="sr-only">About me</span>
+            />
+            {/* <span className="sr-only">About me</span> */}
           </h3>
           <div className='flex flex-col gap-8 sm:gap-12'>
             <div className='flex flex-col gap-5 text-black text-sm sm:text-lg font-light lg:max-w-[762px] w-full'>
@@ -82,7 +85,7 @@ const About = () => {
             <div className='flex md:max-w-[500px] lg:max-w-none justify-between gap-0 xs:gap-11 xl:max-w-[700px]'>
               <StatsBlock title={95} subtitle='Projects' />
               <StatsBlock title={95} subtitle='Happy clients' />
-              <StatsBlock title={'+6'} subtitle='Years' />
+              <StatsBlock title={6} subtitle='Years' />
             </div>
           </div>
         </div>

@@ -15,6 +15,7 @@ import quotesIcon from '@/assets/icons/quotes.svg';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import AnimatedText from './animatedText';
 
 const reviews = [
   {
@@ -24,12 +25,12 @@ const reviews = [
   },
   {
     user: 'David W.',
-    avatar: avatar2Image,
+    avatar: avatar3Image,
     text: 'I had a leaky faucet that was driving me crazy. The handyman came over, identified the problem quickly, and fixed it in no time. Very efficient and reasonably priced service!',
   },
   {
     user: 'Emily R.',
-    avatar: avatar3Image,
+    avatar: avatar2Image,
     text: "I recently had my entire living room repainted by this service, and I couldn't be happier with the result. The walls look fantastic, and the attention to detail was impressive. Will definitely use their services again",
   },
   {
@@ -93,7 +94,7 @@ const Reviews = () => {
             <h3
               id='reviews'
               className='scroll-m-[100px] xl:scroll-m-[200px] text-white text-[32px] sm:text-5xl font-semibold leading-[30px] xs:leading-[67px]'>
-              Customer reviews
+              <AnimatedText text='Customer reviews' />
             </h3>
             <Swiper
               containerModifierClass='reviews-container-'

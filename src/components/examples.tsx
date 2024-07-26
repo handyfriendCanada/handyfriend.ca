@@ -18,6 +18,7 @@ import example10 from '@/assets/example10.png';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+import AnimatedText from './animatedText';
 
 const ExampleCard = ({ image, title }: { image: StaticImageData; title: string }) => {
   return (
@@ -35,7 +36,7 @@ const Examples = () => {
         <h3
           id='examples'
           className='scroll-m-[120px] xl:scroll-m-[170px] text-center text-black text-[32px] sm:text-5xl font-semibold leading-[30px] xs:leading-[67px]'>
-          Examples of my works
+          <AnimatedText text='Examples of my works' />
         </h3>
         <div className='w-full relative'>
           <Swiper

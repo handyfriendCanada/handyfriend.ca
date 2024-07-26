@@ -9,6 +9,7 @@ import FloorsIcon from '@/assets/icons/floors.svg';
 import PlumbingIcon from '@/assets/icons/plumbing.svg';
 import SawIcon from '@/assets/icons/saw.svg';
 import DeviceIcon from '@/assets/icons/device.svg';
+import AnimatedText from './animatedText';
 
 const ServiceBlock = ({
   icon,
@@ -47,7 +48,8 @@ const Services = () => {
         <h3
           id='services'
           className='scroll-m-[100px] xl:scroll-m-[200px] text-center text-black text-[32px] sm:text-5xl font-semibold leading-[67px]'>
-          Services
+          {/* Services */}
+          <AnimatedText text='Services' />
         </h3>
         <div className='grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-[14px] gap-y-[17px] sm:gap-x-7 sm:gap-y-9'>
           <ServiceBlock

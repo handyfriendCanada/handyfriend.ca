@@ -46,7 +46,8 @@ export default function Discount() {
           >
             <circle r={1} cx={1} cy={1} />
           </svg>
-          🔧 Limited-Time Offer: {' '}
+          <span className='text-red-600 font-semibold '>🔧 Limited-Time Offer:</span>
+          {' '}
           <br className='block 1xs:hidden' />
           25% Off All Services!
         </p>
