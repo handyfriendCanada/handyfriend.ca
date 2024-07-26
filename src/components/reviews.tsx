@@ -40,12 +40,12 @@ const reviews = [
   },
   {
     user: 'David W.',
-    avatar: avatar2Image,
+    avatar: avatar3Image,
     text: 'I had a leaky faucet that was driving me crazy. The handyman came over, identified the problem quickly, and fixed it in no time. Very efficient and reasonably priced service!',
   },
   {
     user: 'Emily R.',
-    avatar: avatar3Image,
+    avatar: avatar2Image,
     text: 'I needed some electrical work done in my new apartment, and the handyman did an excellent job. He was punctual, professional, and ensured everything was working perfectly before leaving. Highly recommend!',
   },
 ];

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 
@@ -6,15 +8,14 @@ import About2Image from '@/assets/about2.jpg';
 import About3Image from '@/assets/about3.jpg';
 import AnimatedNumbers from './animatedNumbers';
 import AnimatedText from './animatedText';
+import { motion } from 'framer-motion';
 
 const StatsBlock = ({ title, subtitle }: { title: number; subtitle: string }) => {
   return (
     <div className='flex flex-col items-center gap-1 sm:gap-3'>
       <p className='text-main text-[40px] sm:text-[50px] xl:text-[64px] font-semibold'>
         <span className='sr-only'>{title}</span>
-        {title === 6 && (
-          '+'
-        )}
+        {title === 6 && '+'}
         <AnimatedNumbers value={title} />
         {/* {title} */}
       </p>
@@ -28,38 +29,55 @@ const About = () => {
     <div className='px-5 flex justify-center'>
       <div className='pt-10 pb-32 sm:pt-20 sm:pb-40 max-w-screen-container w-full items-center 2xl:items-start flex flex-col lg:flex-row gap-8 xl:gap-12'>
         <div className='flex justify-center gap-2 sm:gap-4 order-last lg:order-none mt-[30px] md:mt-0'>
-          <Image
-            quality={100}
-            width={341}
-            height={605}
-            className='rounded-[10px] lg:rounded-[30px]'
-            src={About1Image}
-            alt='handyman'
-          />
-          <div className='relative top-16 flex flex-col gap-2 sm:gap-4'>
+          <motion.div
+            initial={{ x: '-100%', opacity: 0 }}
+            whileInView={{ x: '0%', opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 1 }}>
             <Image
-              src={About2Image}
-              alt='instruments'
               quality={100}
-              width={445}
-              height={275}
+              width={341}
+              height={605}
               className='rounded-[10px] lg:rounded-[30px]'
-            />
-            <Image
-              src={About3Image}
+              src={About1Image}
               alt='handyman'
-              quality={100}
-              width={384}
-              height={361}
-              className='rounded-[10px] lg:rounded-[30px]'
             />
+          </motion.div>
+          <div className='relative top-16 flex flex-col gap-2 sm:gap-4'>
+            <motion.div
+              initial={{ x: '-100%', opacity: 0 }}
+              whileInView={{ x: '0%', opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}>
+              <Image
+                src={About2Image}
+                alt='instruments'
+                quality={100}
+                width={445}
+                height={275}
+                className='rounded-[10px] lg:rounded-[30px]'
+              />
+            </motion.div>
+            <motion.div
+              initial={{ x: '-100%', opacity: 0 }}
+              whileInView={{ x: '0%', opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}>
+              <Image
+                src={About3Image}
+                alt='handyman'
+                quality={100}
+                width={384}
+                height={361}
+                className='rounded-[10px] lg:rounded-[30px]'
+              />
+            </motion.div>
           </div>
         </div>
         <div className='basis-1/2 flex flex-col gap-5 sm:gap-10'>
           <h3
             id='about'
-            className='scroll-m-[100px] xl:scroll-m-[200px] text-black text-[32px] sm:text-5xl font-semibold leading-[67px]'
-          >
+            className='scroll-m-[100px] xl:scroll-m-[200px] text-black text-[32px] sm:text-5xl font-semibold leading-[67px]'>
             <AnimatedText
               text='About me'
               className='scroll-m-[100px] xl:scroll-m-[200px] text-black text-[32px] sm:text-5xl font-semibold leading-[67px]'

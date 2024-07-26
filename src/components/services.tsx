@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import BrushIcon from '@/assets/icons/brush.svg';
 import FenceIcon from '@/assets/icons/fence.svg';
@@ -11,6 +14,25 @@ import SawIcon from '@/assets/icons/saw.svg';
 import DeviceIcon from '@/assets/icons/device.svg';
 import AnimatedText from './animatedText';
 
+const containerVariants = {
+  initial: { opacity: 0 },
+  view: {
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0,
+      duration: 0.7,
+      delayChildren: 0.3,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  initial: { opacity: 0, scale: 0 },
+  view: { opacity: 1, scale: 1 },
+};
+
 const ServiceBlock = ({
   icon,
   title,
@@ -21,7 +43,9 @@ const ServiceBlock = ({
   description: string;
 }) => {
   return (
-    <div className='px-2 sm:px-4 py-[40px] sm:py-[70px] rounded-[10px] sm:rounded-[30px] bg-lightBG flex flex-col items-center gap-[50px]'>
+    <motion.div
+      variants={itemVariants}
+      className='px-2 sm:px-4 py-[40px] sm:py-[70px] rounded-[10px] sm:rounded-[30px] bg-lightBG flex flex-col items-center gap-[50px]'>
       <div className='flex justify-center items-center'>
         <Image
           src={icon}
@@ -37,7 +61,7 @@ const ServiceBlock = ({
           {description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -48,10 +72,14 @@ const Services = () => {
         <h3
           id='services'
           className='scroll-m-[100px] xl:scroll-m-[200px] text-center text-black text-[32px] sm:text-5xl font-semibold leading-[67px]'>
-          {/* Services */}
           <AnimatedText text='Services' />
         </h3>
-        <div className='grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-[14px] gap-y-[17px] sm:gap-x-7 sm:gap-y-9'>
+        <motion.div
+          variants={containerVariants}
+          initial='initial'
+          whileInView='view'
+          viewport={{ once: true }}
+          className='grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-[14px] gap-y-[17px] sm:gap-x-7 sm:gap-y-9'>
           <ServiceBlock
             icon={ElectricityIcon}
             title='Electrical Installation Works'
@@ -92,7 +120,7 @@ const Services = () => {
             title='TV wall mouting'
             description='Installation and adjustment of TV'
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
