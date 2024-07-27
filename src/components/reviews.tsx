@@ -10,6 +10,9 @@ import avatar1Image from '@/assets/avatar1.png';
 import avatar2Image from '@/assets/avatar2.png';
 import avatar3Image from '@/assets/avatar3.png';
 import avatar4Image from '@/assets/avatar4.png';
+import avatar5Image from '@/assets/avatar5.png';
+import avatar6Image from '@/assets/avatar6.png';
+import avatar7Image from '@/assets/avatar7.png';
 import quotesIcon from '@/assets/icons/quotes.svg';
 
 import 'swiper/css';
@@ -39,14 +42,19 @@ const reviews = [
     text: 'I needed help assembling some new furniture, and the handyman was a lifesaver. He was very knowledgeable and got everything put together much faster than I could have done on my own. Excellent service!',
   },
   {
-    user: 'David W.',
-    avatar: avatar3Image,
-    text: 'I had a leaky faucet that was driving me crazy. The handyman came over, identified the problem quickly, and fixed it in no time. Very efficient and reasonably priced service!',
+    user: 'Elise N.',
+    avatar: avatar5Image,
+    text: 'He responded almost immediately to my text, and despite the great reviews about him, was available almost immediately for a relatively small job (not always easy to get people in for these small jobs!). He was lovely and the work was excellent. Very professional, friendly and kind - great work done. We will be using him again for sure.',
   },
   {
-    user: 'Emily R.',
-    avatar: avatar2Image,
-    text: 'I needed some electrical work done in my new apartment, and the handyman did an excellent job. He was punctual, professional, and ensured everything was working perfectly before leaving. Highly recommend!',
+    user: 'Lana T.',
+    avatar: avatar7Image,
+    text: 'My first time using this service and I am so pleased. Professional, quick to respond, and affordable. I will definitely be turning to them again.',
+  },
+  {
+    user: 'Erik J.',
+    avatar: avatar6Image,
+    text: 'Highest recommendation for Handyfriend. He beautifully replaced our walkout steps in the time promised and in line with his very fair estimate. In addition,  it was so pleasant and easy to work with. I certainly would employ him for any future repair work.',
   },
 ];
 
