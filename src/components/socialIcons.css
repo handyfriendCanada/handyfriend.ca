@@ -69,7 +69,12 @@
   width: 100%;
   height: 100%;
 }
-
+.share-btn .social-icons{
+  display: none;
+}
+.share-btn.open .social-icons{
+  display: flex;
+}
 .share-btn.open {
   width: 6em;
   background-color: #1531c1;
