@@ -44,10 +44,10 @@ const PricingPolicy = () => {
 
                     <div className='flex items-center justify-center gap-2'>
                       <span className='text-black text-[22px] xs:text-[28px] sm:text-[40px] font-normal line-through'>
-                        $99
+                        $109
                       </span>
                       <span className='text-main text-[28px] xs:text-[34px] sm:text-[50px] font-bold '>
-                        $74.25
+                        $81.75
                       </span>
                     </div>
                   </div>
@@ -62,10 +62,10 @@ const PricingPolicy = () => {
                     </p>
                     <div className='flex items-center justify-center gap-2'>
                       <span className='text-black text-[22px] xs:text-[28px] sm:text-[40px] font-normal line-through'>
-                        $49
+                        $59
                       </span>
                       <span className='text-main text-[28px]  xs:text-[34px] sm:text-[50px] font-bold '>
-                        $36.75
+                        $44.25
                       </span>
                     </div>
                   </div>
