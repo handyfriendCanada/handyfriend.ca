@@ -12,8 +12,8 @@ const DiscountBlock = () => {
             <AnimatedText text='Get 25% off your first handyman service order!'/>
           </h2>
           <p className='max-w-[1299px] text-black text-base sm:text-[20px] font-normal'>
-            Hello! I&apos;m excited to offer you a special deal available only for the month of
-            August. Whether you need repairs, installations, or general maintenance, our skilled
+            Hello! I&apos;m excited to offer you a special deal for first time order -25%.
+            Whether you need repairs, installations, or general maintenance, our skilled
             handymen are ready to help you. Book now and take advantage of this limited-time offer!
           </p>
         </div>
