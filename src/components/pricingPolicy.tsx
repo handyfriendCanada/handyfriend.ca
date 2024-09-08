@@ -83,10 +83,10 @@ const PricingPolicy = () => {
 
                 <p className='text-center'>
                   <span className='text-black text-base sm:text-xl font-medium leading-tight'>
-                    The discount is valid when ordering&nbsp;
+                    The discount is valid for&nbsp;
                   </span>
                   <span className='text-main text-base sm:text-xl font-medium leading-tight'>
-                    in August
+                    first order
                   </span>
                 </p>
               </div>
